@@ -27,6 +27,7 @@ public class A1_SelectionSort {
         arr[j] = tmp;
     }
 
+
     public static void main(String[] args) {
 //        int[] arr= new int[]{3,-1,-1,-4,1,5,9};
 //        selectSort(arr);
@@ -57,8 +58,7 @@ public class A1_SelectionSort {
     }
 
 
-
-//  以下都是对数器
+    //  以下都是对数器
     private static int[] generateRandomArray(int maxSize, int maxValue) {
         int[] arr = new int[(int) (Math.random() * (maxSize + 1))];
         for (int i = 0; i < arr.length; i++) {

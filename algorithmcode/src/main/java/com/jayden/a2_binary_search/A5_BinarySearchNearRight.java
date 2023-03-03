@@ -28,6 +28,7 @@ public class A5_BinarySearchNearRight {
         return index;
     }
 
+
     public static void main(String[] args) {
 //        int[] arr = new int[]{1,3,5,7,7,9,11,12,14};
 //        int i = nearLeftIndex(arr, 7);
@@ -43,19 +44,19 @@ public class A5_BinarySearchNearRight {
             if (nearRight(arr, value) != comparator(arr, value)) {
                 succeed = false;
                 printArr(arr);
-                System.out.println("value is: "+value);
+                System.out.println("value is: " + value);
                 System.out.println("nearLeftIndex answer is: " + nearRight(arr, value));
                 System.out.println("comparator answer is: " + comparator(arr, value));
                 break;
             }
         }
-        System.out.println(succeed?"Nice!":"Fucking fucked!");
-        if (succeed){
+        System.out.println(succeed ? "Nice!" : "Fucking fucked!");
+        if (succeed) {
             int[] arr = generateRandomArr(maxSize, maxValue);
             int value = (int) ((Math.random() + 1) * maxValue) - (int) ((Math.random() + 1) * maxValue);
             Arrays.sort(arr);
             printArr(arr);
-            System.out.println("value is: "+value);
+            System.out.println("value is: " + value);
             System.out.println("nearLeftIndex answer is: " + nearRight(arr, value));
         }
     }

@@ -27,6 +27,8 @@ public class A4_BinarySearchExistNum {
         return false;
     }
 
+
+
     public static void main(String[] args) {
 //        int[] arr = new int[]{1,3,5,7,7,9,11,12,14};
 //        boolean succeed = binarySearchExistNum(arr, 11);

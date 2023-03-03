@@ -10,6 +10,7 @@ public class A11_DeleteGivenNum {
         }
     }
 
+
     public static Node deleteGivenNum(Node head, int value) {
         while (head != null) {
             if (head.value!=value){

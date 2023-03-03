@@ -20,7 +20,7 @@ public class A9_findKFromKM {
         int result = 0;
         for (int i = 0; i < ans.length; i++) {
             ans[i] %= m;
-            if (ans[i]!= 0) {
+            if (ans[i] != 0) {
                 result |= 1 << i;
             }
         }
@@ -73,6 +73,24 @@ public class A9_findKFromKM {
         return ans;
     }
 
+    public static int findKFromM(int[] arr, int K, int M) {
+        int[] help = new int[32];
+        for (int num : arr) {
+            for (int i = 0; i < 32; i++) {
+                help[i] += (num >> i) & 1;
+            }
+        }
+
+        int ans = 0;
+        for (int i = 0; i < help.length; i++) {
+            if (help[i] % M != 0) {
+                ans |= 1 << i;
+            }
+        }
+        return ans;
+
+    }
+
     public static void main(String[] args) {
 //        int[] arr = new int[]{1,1,1,1,1,2,2,2,2,2,3,3,3,3,3,4,4,4,4,4,5,5,5,5,5,7,7,7,9,9,9,9,9};
 //        int result = findKFromKM(arr, 3, 5);
@@ -94,7 +112,7 @@ public class A9_findKFromKM {
             int[] arr = randomArray(kinds, range, k, m);
             int ans1 = test(arr, k, m);
             int ans2 = onlyKTimes(arr, k, m);
-            int ans3 = findKFromKM(arr, k, m);
+            int ans3 = findKFromM(arr, k, m);
             if (ans1 != ans2 || ans1 != ans3) {
                 System.out.println(ans1);
                 System.out.println(ans3);

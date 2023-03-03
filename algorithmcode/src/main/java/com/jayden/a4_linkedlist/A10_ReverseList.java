@@ -41,6 +41,7 @@ public class A10_ReverseList {
         return pre;
     }
 
+
     public static DoubleNode reverseDoubleList(DoubleNode head) {
         DoubleNode pre = null;
         DoubleNode next = null;
@@ -53,6 +54,8 @@ public class A10_ReverseList {
         }
         return pre;
     }
+
+
 
     public static Node testReverseLinkedList(Node head) {
         if (head == null) {

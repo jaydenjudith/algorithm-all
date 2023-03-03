@@ -1,4 +1,4 @@
-package com.jayden.a4_linkedlist;
+package com.jayden.a5_stack_queue;
 
 /**
  * 数组实现栈和队列

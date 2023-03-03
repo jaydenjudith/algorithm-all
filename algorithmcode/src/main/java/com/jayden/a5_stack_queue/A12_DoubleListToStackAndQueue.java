@@ -1,4 +1,4 @@
-package com.jayden.a4_linkedlist;
+package com.jayden.a5_stack_queue;
 
 import java.util.LinkedList;
 import java.util.Queue;

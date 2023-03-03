@@ -12,20 +12,22 @@ import java.util.Arrays;
  */
 public class A5_BinarySearchNearLeft {
 
+
     public static int nearLeftIndex(int[] arr, int value) {
         int L = 0;
         int R = arr.length - 1;
-        int Index = -1;
+        int mid = 0;
+        int index = -1;
         while (L <= R) {
-            int mid = L + ((R - L) >> 1);
-            if (arr[mid] >= value) {
-                Index = mid;
-                R = mid - 1;
-            } else {
-                L = mid + 1;
+            mid = L + ((R - L) >> 1);
+            if (arr[mid]>=value){
+                index = mid;
+                R = mid-1;
+            }else{
+                L = mid+1;
             }
         }
-        return Index;
+        return index;
     }
 
     public static void main(String[] args) {
@@ -43,19 +45,19 @@ public class A5_BinarySearchNearLeft {
             if (nearLeftIndex(arr, value) != comparator(arr, value)) {
                 succeed = false;
                 printArr(arr);
-                System.out.println("value is: "+value);
+                System.out.println("value is: " + value);
                 System.out.println("nearLeftIndex answer is: " + nearLeftIndex(arr, value));
                 System.out.println("comparator answer is: " + comparator(arr, value));
                 break;
             }
         }
-        System.out.println(succeed?"Nice!":"Fucking fucked!");
-        if (succeed){
+        System.out.println(succeed ? "Nice!" : "Fucking fucked!");
+        if (succeed) {
             int[] arr = generateRandomArr(maxSize, maxValue);
             int value = (int) ((Math.random() + 1) * maxValue) - (int) ((Math.random() + 1) * maxValue);
             Arrays.sort(arr);
             printArr(arr);
-            System.out.println("value is: "+value);
+            System.out.println("value is: " + value);
             System.out.println("nearLeftIndex answer is: " + nearLeftIndex(arr, value));
         }
     }

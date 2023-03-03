@@ -22,6 +22,7 @@ public class A3_InsertSort {
         arr[i] = arr[i] ^ arr[j];
     }
 
+
     public static void main(String[] args) {
 //        int[] arr = new int[]{3, -1, -1, -4, 1, 5, 9};
 //        insertSort(arr);

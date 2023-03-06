@@ -12,7 +12,7 @@ package com.jayden.a6_recursion;
  * 2的后面没有
  * 所以总共有5个
  *
- * 本题测试链接 : https://leetcode.com/problems/reverse-pairs/
+ * 本题测试链接 : https://leetcode.com/problems/reverse-pairs/  (hard难度)
  */
 public class A21_BiggerThanRightTwice {
 
